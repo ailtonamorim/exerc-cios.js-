@@ -1,3 +1,102 @@
+// // Exercício 1: Manipulação de Array - parte 1
+// // a. Crie um array chamado produtos contendo três nomes de produtos.
+// // b. Acesse e imprima o segundo produto.
+// // c. Modifique o terceiro produto para "Notebook" e imprima o array atualizado.
+
+
+
+
+// let produtos = ["televisão","computador","celular"];
+// // console.log(produtos[1]);
+// produtos[2] = "Notebook"
+// // console.log(produtos)
+
+
+// // Exercício 2: Manipulação de Array - parte 2
+// // a. Crie um array chamado clientes contendo três nomes de clientes.
+// // b. Adicione um quarto cliente ao array.
+// // c. Remova o último cliente e imprima o array atualizado.
+
+
+// let clientes = ["Ailton","Zaira","Anna Vitória"];
+// // clientes[3] = "César Vinícius";
+// clientes[clientes.length] = "César Vinícius";
+// // console.log(clientes)
+// clientes.length = clientes.length - 1;
+// // console.log(clientes.length)
+// // console.log(clientes)
+
+
+// // Exercício 3: Manipulação de Objetos - parte 1
+// // a. Crie um objeto chamado produto com as propriedades nome, preco e quantidade.
+// // b. Acesse e imprima o nome do produto.
+// // c. Modifique o preço do produto e imprima o objeto atualizado.
+
+
+// // let produto = {
+// //     nome:'geladeira',
+// //     preco:100,
+// //     quantidade: 10
+
+// // };
+// // console.log(produto["nome"])
+// // produto["preco"] = 500;
+// // console.log(produto)
+
+
+
+// // Exercício 4: Manipulação de Objetos - parte 2
+// // a. Crie um objeto chamado venda com as propriedades cliente, produto e valor.
+// // b. Adicione a propriedade data ao objeto.
+// // c. Remova a propriedade produto e imprima o objeto atualizado.
+
+// let venda = {
+//     cliente:"Ailton",
+//     produto: "carro",
+//     valor:   10000
+
+// }
+// venda["data"] = "05/02/2026";
+// delete venda["produto"];
+
+// // console.log(venda);
+
+
+
+
+// // Exercício 5: Manipulação dos Tipos Referências
+// // a. Crie um array estoque e atribua seus valores para um novo array novoEstoque.
+// // b. Modifique um elemento de novoEstoque e mostre que estoque não foi alterado.
+// // c. Crie um objeto funcionario e atribua seus valores para um novo objeto
+// // novoFuncionario.
+// // d. Modifique uma propriedade de novoFuncionario e mostre que funcionario não foi
+// // alterado.
+
+
+// let estoque = [1,2,6];
+// let novoEstoque = [...estoque];
+// novoEstoque[1] = 10;
+
+// console.log(estoque)
+
+
+// let funcionario =  {
+//     nomeNovo: "Ailton"
+
+// }
+
+// let novoFuncionario =  {...funcionario}
+
+// novoFuncionario["nomeNovo"] = "Zaira"
+
+
+// console.log(funcionario)
+
+
+
+
+
+
 // Exercício 1: Manipulação de Array - parte 1
 // a. Crie um array chamado produtos contendo três nomes de produtos.
 // b. Acesse e imprima o segundo produto.
@@ -5,11 +104,11 @@
 
 
 
-
-let produtos = ["televisão","computador","celular"];
+let produtos = ['cadeira', 'mesa','cama'];
 // console.log(produtos[1]);
-produtos[2] = "Notebook"
+produtos[2] = 'Notebook';
 // console.log(produtos)
+
 
 
 // Exercício 2: Manipulação de Array - parte 2
@@ -18,30 +117,34 @@ produtos[2] = "Notebook"
 // c. Remova o último cliente e imprima o array atualizado.
 
 
-let clientes = ["Ailton","Zaira","Anna Vitória"];
-// clientes[3] = "César Vinícius";
-clientes[clientes.length] = "César Vinícius";
-// console.log(clientes)
-clientes.length = clientes.length - 1;
-// console.log(clientes.length)
+
+const clientes = ['Ailton','Zaira','outros'];
+clientes.push('Anna Vitoria')
+clientes.pop();
 // console.log(clientes)
 
 
 // Exercício 3: Manipulação de Objetos - parte 1
-// a. Crie um objeto chamado produto com as propriedades nome, preco e quantidade.
-// b. Acesse e imprima o nome do produto.
-// c. Modifique o preço do produto e imprima o objeto atualizado.
+// a. Crie um objeto chamado produtosObjeto com as propriedades nome, preco e quantidade.
+// b. Acesse e imprima o nome do produtosObjeto.
+// c. Modifique o preço do produtosObjeto e imprima o objeto atualizado.
 
 
-// let produto = {
-//     nome:'geladeira',
-//     preco:100,
-//     quantidade: 10
+const produtosObjeto = {
+    nome:'Notebook',
+    preco:1200,
+    quantidade: 10
 
-// };
-// console.log(produto["nome"])
-// produto["preco"] = 500;
-// console.log(produto)
+};
+
+// console.log(produtosObjeto.nome)
+
+produtosObjeto.preco = 1300;
+// console.log({...produtosObjeto,
+//     preco:produtosObjeto.preco.toFixed(2)
+// })
+
+
 
 
 
@@ -50,44 +153,49 @@ clientes.length = clientes.length - 1;
 // b. Adicione a propriedade data ao objeto.
 // c. Remova a propriedade produto e imprima o objeto atualizado.
 
-let venda = {
-    cliente:"Ailton",
-    produto: "carro",
-    valor:   10000
-
-}
-venda["data"] = "05/02/2026";
-delete venda["produto"];
-
-// console.log(venda);
 
 
+
+const venda = {
+    cliente:'Ailton',
+    produto:'Notebook',
+    valor: 15000
+};
+
+venda.data = new Date;
+delete venda.produto;
+// console.log({...venda,
+//     valor:venda.valor.toFixed(2)
+// });
 
 
 // Exercício 5: Manipulação dos Tipos Referências
 // a. Crie um array estoque e atribua seus valores para um novo array novoEstoque.
 // b. Modifique um elemento de novoEstoque e mostre que estoque não foi alterado.
+
+
+const estoque = [40,60,50];
+const novoEstoque = [...estoque];
+novoEstoque[2] = 80;
+// console.log(estoque);
+// console.log(novoEstoque);
+
+
+
+
 // c. Crie um objeto funcionario e atribua seus valores para um novo objeto
 // novoFuncionario.
 // d. Modifique uma propriedade de novoFuncionario e mostre que funcionario não foi
 // alterado.
 
 
-let estoque = [1,2,6];
-let novoEstoque = [...estoque];
-novoEstoque[1] = 10;
+const funcionario = {
+    nome: 'Ailton',
+    cargo: 'gerente',
+    salario: 1200
+};
 
-console.log(estoque)
-
-
-let funcionario =  {
-    nomeNovo: "Ailton"
-
-}
-
-let novoFuncionario =  {...funcionario}
-
-novoFuncionario["nomeNovo"] = "Zaira"
-
-
-console.log(funcionario)
+const novoFuncionario = {...funcionario}
+novoFuncionario.salario = 100000;
+console.log({...funcionario, salario:funcionario.salario.toFixed(2)})
+console.log({...novoFuncionario,salario:novoFuncionario.salario.toFixed(2)})
