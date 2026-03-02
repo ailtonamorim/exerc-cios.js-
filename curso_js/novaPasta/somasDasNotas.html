@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    
+    <!-- 1 - Faça uma função que recebe as notas das 3 provas de um aluno e calcula a média dessas. Ao
+término do processo, devemos ter a mensagem "a média desse aluno é x" (sendo x o resultado do
+cálculo) -->
+
+
+    <h1>Calculos de Notas</h1>
+    <h3>Digite Primeira Nota</h3>
+
+    <input type="number" id="primeiraNota">
+
+    <h3>Digite Segunda Nota</h3>
+
+    <input type="number" id="segundaNota">
+
+    <h3>Digite Terçeira Nota</h3>
+
+    <input type="number" id="terceiraNota">
+
+    <button onclick="calculosDeNotas()">Soma Das Notas</button>
+
+    <h3 id="resposta"></h3>
+
+    <!-- 1 - Faça uma função que recebe as notas das 3 provas de um aluno e calcula a média dessas. Ao
+término do processo, devemos ter a mensagem "a média desse aluno é x" (sendo x o resultado do
+cálculo) -->
+
+
+    <script>
+
+        function calcularMedia(n1, n2, n3){
+            return (n1 + n2 + n3) / 3
+        };
+
+
+        function calculosDeNotas() {
+            const primeiraNota = Number(document.getElementById("primeiraNota").value);
+            const segundaNota = Number(document.getElementById("segundaNota").value);
+            const terceiraNota = Number(document.getElementById("terceiraNota").value);
+
+            const media = Number(calcularMedia(primeiraNota, segundaNota, terceiraNota).toFixed(2))
+            
+            
+            document.getElementById("resposta").innerText = `Media de suas notas: ${media}`;
+
+
+
+        }
+    </script>
+
+
+
+</body>
+
+</html>

@@ -3,13 +3,13 @@
 // // b. Acesse e imprima o segundo produto.
 // // c. Modifique o terceiro produto para "Notebook" e imprima o array atualizado.
 
+let produtos = ["teclado", "computador", "mouse"];
+// console.log(produtos[1]);
+produtos[2] = "Notebook";
+// console.log(produtos)
 
 
 
-// let produtos = ["televisão","computador","celular"];
-// // console.log(produtos[1]);
-// produtos[2] = "Notebook"
-// // console.log(produtos)
 
 
 // // Exercício 2: Manipulação de Array - parte 2
@@ -18,13 +18,10 @@
 // // c. Remova o último cliente e imprima o array atualizado.
 
 
-// let clientes = ["Ailton","Zaira","Anna Vitória"];
-// // clientes[3] = "César Vinícius";
-// clientes[clientes.length] = "César Vinícius";
-// // console.log(clientes)
-// clientes.length = clientes.length - 1;
-// // console.log(clientes.length)
-// // console.log(clientes)
+let clientes = ['zaira','ailton','família']
+clientes.push('contas');
+clientes.pop();
+// console.log(clientes);
 
 
 // // Exercício 3: Manipulação de Objetos - parte 1
@@ -33,15 +30,15 @@
 // // c. Modifique o preço do produto e imprima o objeto atualizado.
 
 
-// // let produto = {
-// //     nome:'geladeira',
-// //     preco:100,
-// //     quantidade: 10
+let produto = {
+    nome: 'impressora',
+    preco: 1500,
+    quantidade: 20
+};
 
-// // };
-// // console.log(produto["nome"])
-// // produto["preco"] = 500;
-// // console.log(produto)
+console.log(produto.nome);
+produto.preco = 2000;
+// console.log({... produto,preco:produto.preco.toFixed(2)});
 
 
 
@@ -50,16 +47,18 @@
 // // b. Adicione a propriedade data ao objeto.
 // // c. Remova a propriedade produto e imprima o objeto atualizado.
 
-// let venda = {
-//     cliente:"Ailton",
-//     produto: "carro",
-//     valor:   10000
+let venda = {
+    cliente: 'Ailton',
+    produto: 'carro',
+    valor: 200000
+};
 
-// }
-// venda["data"] = "05/02/2026";
-// delete venda["produto"];
+venda.data = '01/03/2026';
+delete venda.produto;
 
-// // console.log(venda);
+// console.log({... venda,
+//     valor:venda.valor.toFixed(2)
+// });
 
 
 
@@ -104,10 +103,6 @@
 
 
 
-let produtos = ['cadeira', 'mesa','cama'];
-// console.log(produtos[1]);
-produtos[2] = 'Notebook';
-// console.log(produtos)
 
 
 
@@ -118,10 +113,7 @@ produtos[2] = 'Notebook';
 
 
 
-const clientes = ['Ailton','Zaira','outros'];
-clientes.push('Anna Vitoria')
-clientes.pop();
-// console.log(clientes)
+
 
 
 // Exercício 3: Manipulação de Objetos - parte 1
@@ -130,19 +122,8 @@ clientes.pop();
 // c. Modifique o preço do produtosObjeto e imprima o objeto atualizado.
 
 
-const produtosObjeto = {
-    nome:'Notebook',
-    preco:1200,
-    quantidade: 10
 
-};
 
-// console.log(produtosObjeto.nome)
-
-produtosObjeto.preco = 1300;
-// console.log({...produtosObjeto,
-//     preco:produtosObjeto.preco.toFixed(2)
-// })
 
 
 
@@ -156,17 +137,7 @@ produtosObjeto.preco = 1300;
 
 
 
-const venda = {
-    cliente:'Ailton',
-    produto:'Notebook',
-    valor: 15000
-};
 
-venda.data = new Date;
-delete venda.produto;
-// console.log({...venda,
-//     valor:venda.valor.toFixed(2)
-// });
 
 
 // Exercício 5: Manipulação dos Tipos Referências
@@ -174,11 +145,7 @@ delete venda.produto;
 // b. Modifique um elemento de novoEstoque e mostre que estoque não foi alterado.
 
 
-const estoque = [40,60,50];
-const novoEstoque = [...estoque];
-novoEstoque[2] = 80;
-// console.log(estoque);
-// console.log(novoEstoque);
+
 
 
 
@@ -189,13 +156,19 @@ novoEstoque[2] = 80;
 // alterado.
 
 
-const funcionario = {
-    nome: 'Ailton',
-    cargo: 'gerente',
-    salario: 1200
-};
 
-const novoFuncionario = {...funcionario}
-novoFuncionario.salario = 100000;
-console.log({...funcionario, salario:funcionario.salario.toFixed(2)})
-console.log({...novoFuncionario,salario:novoFuncionario.salario.toFixed(2)})
+// function saudacao(n1 , n2){
+//     return  `O resultado da soma é: ${n1 + n2}`
+// }
+
+// function pedirNumeros(){
+//     let n1 = Number(prompt("Digite primeiro numero"));
+//     let n2 = Number(prompt("Digite primeiro numero"));
+//     let resultado = saudacao(n1, n2);
+
+//     alert(resultado);
+//     console.logo(resultado);
+// }
+
+
+

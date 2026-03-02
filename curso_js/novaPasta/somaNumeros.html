@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h1>Programa para soma números</h1>
+
+    <h2>Digite o primeiro número:</h2>
+    <input type="number" id="numero1">
+
+
+    <h2>Digite o segundo número:</h2>
+    <input type="number" id="numero2">
+    <br>
+    <br>
+
+
+    <button onclick="somaDosNumeros()">soma</button>
+    <p id="resposta"></p>
+
+    <script>
+        function somaDosNumeros(){
+            const soma = Number(document.getElementById("numero1").value);
+            const soma2 = Number(document.getElementById("numero2").value);
+            const somaDoscampos = soma + soma2;
+            document.getElementById("resposta").innerText = `Resultado: ${somaDoscampos}`
+        }
+    </script>
+</body>
+
+</html>
